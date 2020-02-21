@@ -1,0 +1,78 @@
+*{
+    margin:0%;
+    padding:0%;
+}
+.container{
+    width:100%;
+    min-height:100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-auto-columns: 800px auto;
+    grid-auto-rows: 200px 600px 200px;
+    grid-template-areas: 
+                        "header header"
+                        "nav section"
+                        "footear footear";
+}
+ header{
+    grid-area: header;
+    background-color: rgb(228, 246, 246);
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1000px 1fr;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 50px;
+    grid-template-areas: "logo botones";
+}
+header .logo{
+    grid-area:logo;
+    display: flex;
+    align-items: center;
+
+}
+header .logo .fa{
+    background:rgb(255, 255, 255);
+    color: rgb(241, 180, 180);
+    border-radius: 4px;
+    font-size: 100px;
+}
+header .logo  a{
+    font-family: 'Sriracha', cursive;
+    text-decoration: none;
+    font-size: 80px;
+    margin-left: 50px;
+    color: darkorchid;
+    
+}
+header .botones-header{
+    grid-area: botones;
+    display: flex;
+    align-items: center;
+}
+header .botones-header button{
+    border: none;
+    padding: 10px;
+    background: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+nav{
+    grid-area: nav;
+    background-color: crimson;
+    text-align: center;
+}
+section{
+    grid-area:section;
+    background-color: coral;
+    text-align: center;
+}
+footer{
+    grid-area: footear;
+    background-color: darkgray;
+}
