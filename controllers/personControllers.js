@@ -1,16 +1,25 @@
 const pool = require('../config/conn.js');
 const personCtrl = {};
 //redirccionando a person
-personCtrl.renderGetAllPerson = (req, res) =>{
+personCtrl.login = (req, res) =>{
     res.render('../views/index.pug');
    
 }
 personCtrl.GetPersons = async (req, res ) =>{
-     await pool.query('SELECT * FROM person');
-    return res.render('persons');
+  try {
+    let data= await pool.query('SELECT * FROM person');
+    console.log(data);
+    
+    res.render('../views/person.pug',{"personCtrl":data});
+  
+  } catch (error) {
+      console.log(error);
+      
+  }
 }
 
 personCtrl.renderAddPerson = (req, res) => {
+    
     res.render('person/add');
 }
 

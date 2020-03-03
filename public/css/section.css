@@ -11,10 +11,10 @@
     grid-auto-rows: 200px 600px 200px;
     grid-template-areas: 
                         "header header"
-                        "nav section"
+                        "section section"
                         "footear footear";
 }
- header{
+header{
     grid-area: header;
     background-color: rgb(255, 255, 255);
     padding: 0 20px;
@@ -62,13 +62,8 @@ header .botones-header button{
     margin-right: 20px;
 }
 
-nav{
-    grid-area: nav;
-    background-color: crimson;
-    text-align: center;
-}
 section{
-    grid-area:section;
+    grid-area: section;
     background-color: coral;
     text-align: center;
 }
