@@ -1,9 +1,20 @@
 extend _layout
 block section
   section
-    .main.container
-      .row
-        .
-        h1 Login
+    .contenedor
+      .principal
+        h1 Sign Up
+        form(action="", method="post")
+         .form-group
+            label(for="email") Your Email*
+            input(type="email", name="email", placeholder="email@example.com")
+         .form-group
+            label(for="pass") Your Password*
+            input(type="password", name="pass", placeholder="password")
+         .form-group
+            button(type="submit") Entrar
+        a(href="http://")
+          p  I don´t remenber my email 
+    
    
 

@@ -5,6 +5,9 @@ personCtrl.login = (req, res) =>{
     res.render('../views/index.pug');
    
 }
+personCtrl.register = (req, res) =>{
+    res.render('../views/_sections/_register.pug');
+}
 personCtrl.GetPersons = async (req, res ) =>{
   try {
     let data= await pool.query('SELECT * FROM person');

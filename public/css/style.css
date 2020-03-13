@@ -7,7 +7,7 @@
     min-height:100vh;
     margin: 0 auto;
     display: grid;
-    grid-auto-columns: 800px auto;
+    grid-auto-columns: 900px auto;
     grid-auto-rows: 200px 600px 200px;
     grid-template-areas: 
                         "header header"
@@ -16,7 +16,7 @@
 }
  header{
     grid-area: header;
-    background-color: rgb(255, 255, 255);
+    background-color:#F0E5FD;
     padding: 0 20px;
     display: grid;
     grid-template-columns: 1000px 1fr;
@@ -32,7 +32,7 @@ header .logo{
 
 }
 header .logo .fa{
-    background:rgb(255, 255, 255);
+    background:#F0E5FD;
     color: rgb(241, 180, 180);
     border-radius: 4px;
     font-size: 100px;
@@ -42,37 +42,117 @@ header .logo  a{
     text-decoration: none;
     font-size: 80px;
     margin-left: 50px;
-    color: darkorchid;
+    color: #3483EB;
     
 }
 header .botones-header{
     grid-area: botones;
-    display: flex;
+    display: block;
     align-items: center;
 }
 header .botones-header button{
+  
     border: none;
-    padding: 10px;
-    background: none;
+    background-color: #FFBD4E;
+    border-radius:20px;
+    color: white;
+    font-family: 'Sniglet',cursive;
+    font-size: 20px;
+    padding: 15px;
+    margin-top: 5%;
     cursor: pointer;
-    font-size: 18px;
-    border-radius: 100px;
-    width: 50px;
-    height: 50px;
-    margin-right: 20px;
+    margin-bottom: 5%;
+     
+}
+header .botones-header button:hover{
+    background-color: #FFCE39;
 }
 
 nav{
     grid-area: nav;
-    background-color: crimson;
+    background-color: #EFE1FC;
     text-align: center;
 }
 section{
     grid-area:section;
-    background-color: coral;
+    background-color:#7cc3e7;
     text-align: center;
+}
+section .contenedor{
+   background-color: #7cc3e7;
+   max-width: 80%;
+   margin: auto;
+
+   padding: 20%;
+   
+}
+section .contenedor .principal{
+    background-color: #7cc3e7;
+    margin-top: 10%;
+    
+}
+section .contenedor .principal h1{
+    
+    font-family: 'Sriracha', cursive;
+    color: white;
+    font-size: 40px;
+}
+section .contenedor .principal form {
+    margin: 0 auto;
+    width: 300px;
+   
+    position: relative;
+    
+}
+label, input{
+    display: block;
+}
+
+
+section .contenedor .principal form .form-group input{
+  width: 283px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  padding: 5px;
+  font-family: 'Sniglet',cursive;
+  font-size: 1em;
+  color: #676767;
+  border: solid 3px #7cc3e7;
+  cursor: pointer;
+  margin-bottom: 5%;
+}
+input:focus{
+    border: solid 3px #0d4662;
+   
+}
+section .contenedor .principal form .form-group button{
+    width: 294px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    font-family: 'Sniglet',cursive;
+    font-size: 25px;
+    padding: 15px;
+    margin-top: 5%;
+    cursor: pointer;
+    margin-bottom: 5%;
+    color: white;
+    background-color: #FFBD4E;
+   
+}
+section .contenedor .principal form .form-group button:hover{
+    background-color: #FFCE39;
+}
+label,a {
+    font-family: 'Sniglet',cursive;
+    font-size: 1.2em;
+    margin-top: 20px;
+    padding-right:45%;
+    color: white;
+    text-decoration: none;
 }
 footer{
     grid-area: footear;
-    background-color: darkgray;
+    background-color: rgb(241, 180, 180);
 }
